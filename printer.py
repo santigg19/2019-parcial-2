@@ -38,7 +38,7 @@ class Printer:
 
    def print_job(self):
 
-       if self.queue_printer.count == 0:
+       if len(self.queue_printer) == 0:
 
            self.error_flag = True
 
@@ -51,8 +51,6 @@ class Printer:
        self.printing = True
 
        self.queue_printer.pop(0)
-
-
 
    # Hay que llamar esta función para liberar la impresora luego de terminar de imprimir
 
